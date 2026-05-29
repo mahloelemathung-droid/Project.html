@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: whitesmoke;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    background: black;
+
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    border-left: 5px solid purple;
+    border-right: 5px solid purple;
+    gap: 2rem;
+    /* border-radius :10px;*/
+}
+.navbar,.nav-links{
+    border-radius: 15px;
+    background: whitesmoke;
+}
+.navbar,.nav-links{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.navbar,.nav-links,a{
+    text-decoration: none;
+}

@@ -1,14 +1,14 @@
 /* Hope for All Shelter - css/style.css (CSS-only) */
 
 :root{
-  --bg: #f6f7fb;
+  --bg: #0a0c11;
   --text: #0f172a;
   --muted: #475569;
-  --card: #ffffff;
+  --card: #5b1010;
   --border: rgba(15, 23, 42, 0.12);
-  --shadow: 0 12px 30px rgba(2, 6, 23, 0.08);
-  --brand: #8b5cf6; /* purple */
-  --brand2: #0ea5e9; /* sky */
+  --shadow: 0 12px 30px rgba(19, 61, 252, 0.08);
+  --brand: #3c1597; /* purple */
+  --brand2: #0a86c0; /* sky */
 }
 
 *{ box-sizing: border-box; }
@@ -24,13 +24,13 @@ body{
 
 /* Header */
 header{
-  position: fixed;
+  position: space-around;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
 
-  background: rgba(0,0,0,0.92);
+  background: rgba(89, 76, 76, 0.92);
   backdrop-filter: blur(10px);
 
   padding: 14px 16px;
@@ -46,7 +46,7 @@ header{
 #logo img#logo image{ border-radius: 10px; }
 
 header h1, header p{
-  color: #fff;
+  color: #ea0b0b;
 }
 
 header h1{

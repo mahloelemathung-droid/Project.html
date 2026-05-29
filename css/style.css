@@ -1,0 +1,199 @@
+/* Hope for All Shelter - css/style.css (CSS-only) */
+
+:root{
+  --bg: #f6f7fb;
+  --text: #0f172a;
+  --muted: #475569;
+  --card: #ffffff;
+  --border: rgba(15, 23, 42, 0.12);
+  --shadow: 0 12px 30px rgba(2, 6, 23, 0.08);
+  --brand: #8b5cf6; /* purple */
+  --brand2: #0ea5e9; /* sky */
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(1200px 500px at 10% 0%, rgba(139,92,246,.16), transparent 60%),
+              radial-gradient(900px 500px at 90% 10%, rgba(14,165,233,.14), transparent 55%),
+              var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(10px);
+
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 18px;
+
+  border-left: 5px solid var(--brand);
+  border-right: 5px solid var(--brand);
+}
+
+#logo img#logo image{ border-radius: 10px; }
+
+header h1, header p{
+  color: #fff;
+}
+
+header h1{
+  margin: 0;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+}
+
+header p{
+  margin: 0;
+  max-width: 56ch;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.98rem;
+}
+
+/* Navbar */
+.navbar, .nav-links{
+  border-radius: 15px;
+  background: rgba(255,255,255,0.92);
+}
+
+.navbar,.nav-links{
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-links{ flex-wrap: wrap; }
+
+.navbar a,
+.nav-links a{
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.navbar a:hover,
+.nav-links a:hover,
+.navbar a:focus-visible,
+.nav-links a:focus-visible{
+  background: rgba(14,165,233,.14);
+  outline: none;
+}
+
+/* Offset for fixed header */
+main{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 110px 16px 28px;
+}
+
+section{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+section h2, section h3, section h4, section h5{
+  margin: 0 0 10px;
+}
+
+section p{ margin: 0 0 10px; color: var(--muted); }
+
+/* Images */
+img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+#people at shelter-image{ margin-top: 12px; }
+
+/* About page layout helpers (index.html uses these ids/classes) */
+.container-div{ margin-top: 6px; }
+.section2-image{ margin-bottom: 12px; }
+
+/* Enquiry form */
+form{
+  display: grid;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+label{
+  font-weight: 800;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea{
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.92);
+  outline: none;
+}
+
+input:focus, textarea:focus{
+  border-color: rgba(14,165,233,.75);
+  box-shadow: 0 0 0 4px rgba(14,165,233,.18);
+}
+
+textarea{ min-height: 120px; resize: vertical; }
+
+button{
+  cursor: pointer;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 16px;
+  color: #fff;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--brand2), #4f46e5);
+}
+
+button:hover{ filter: brightness(1.03); }
+
+/* Footer */
+footer{
+  padding: 10px 16px 26px;
+  color: var(--muted);
+}
+
+footer p{
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 860px){
+  header{ flex-direction: column; align-items: flex-start; }
+  main{ padding-top: 210px; }
+}
+
+@media (max-width: 520px){
+  nav, .navbar, .nav-links{ width: 100%; }
+  .navbar, .nav-links{ justify-content: center; }
+  main{ padding-top: 240px; }
+}
+

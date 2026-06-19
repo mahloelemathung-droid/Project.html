@@ -455,5 +455,3 @@ message:"Hello"
 alert("Form submitted successfully!");
 
 });
-
-});

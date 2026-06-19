@@ -372,3 +372,88 @@ eventContainer.innerHTML += `
 `;
 
 });
+document.getElementById("enquiryForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let enquiry =
+document.getElementById("enquiryType").value;
+
+let message = "";
+
+switch(enquiry){
+
+case "Volunteer":
+message =
+"Volunteer positions are available every weekend.";
+break;
+
+case "Sponsorship":
+message =
+"Sponsorship packages start from R500 per month.";
+break;
+
+case "Donation":
+message =
+"Donations can be made online or at our shelter.";
+break;
+
+case "Shelter Services":
+message =
+"Shelter services are available subject to space.";
+break;
+}
+
+document.getElementById("response")
+.innerHTML = message;
+
+});
+document.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+let email =
+document.getElementById("contactEmail").value;
+
+let emailPattern =
+/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(!emailPattern.test(email)){
+
+e.preventDefault();
+
+alert("Please enter a valid email.");
+
+}
+
+});
+document.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+fetch("https://jsonplaceholder.typicode.com/posts",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+name:"Test User",
+
+message:"Hello"
+
+})
+
+})
+.then(response => response.json())
+.then(data => {
+
+alert("Form submitted successfully!");
+
+});
+
+});

@@ -23,18 +23,33 @@
     </nav>
     <main>
         <section>
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Enquiry</button>
-            </form>
-            <p>Email: hopeforall@gmail.com | Phone: 607802515</p>
-        </section>
+            <h5>Enquiry Form</h5>
+            <form id="enquiryForm">
+            <label>Full Name:</label><br>
+<input type="text" id="name" required><br><br>
+
+<label>Email:</label><br>
+<input type="email" id="email" required><br><br>
+
+<label>Phone Number:</label><br>
+<input type="tel" id="phone"
+pattern="[0-9]{10}"
+required><br><br>
+
+<label>Enquiry Type:</label><br>
+<select id="enquiryType">
+<option>Volunteer</option>
+<option>Sponsorship</option>
+<option>Donation</option>
+<option>Shelter Services</option>
+</select><br><br>
+
+<button type="submit">Submit Enquiry</button>
+
+</form>
+
+<div id="response"></div>
+
     </main>
     <footer>
         <p>&copy; 2026 Hope for All Shelter</p>

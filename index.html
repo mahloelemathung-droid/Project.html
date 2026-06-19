@@ -151,12 +151,57 @@ The organisation will create opportunities for people to rebuild their lives.</p
         </section>
             </section>
             <section id="contact">
-                <h4>contact</h4>
-               <p>email: <a href="email">hopeoforall@gmail.com</a>
-               cell number <a href="cell number">0607802515/0827027391</a>
-                instagram <a href="instagram">@hopeforall</a>
-              tiktok <a href="tiktok">@hopeforall</a>
-            </section>
+        
+    <h4>Contact Information</h4>
+
+    <p>Hope for All Shelter</p>
+    <p>Polokwane, South Africa</p>
+    <p>+27 607802515</p>
+    <p>info@hopeforall.org</p>
+
+    <form id="contactForm"
+action="mailto:info@hopeforall.org"
+method="post"
+enctype="text/plain">
+
+<label>Full Name:</label><br>
+<input type="text"
+id="fullname"
+required><br><br>
+
+<label>Email:</label><br>
+<input type="email"
+id="contactEmail"
+required><br><br>
+
+<label>Message Type:</label><br>
+
+<select required>
+<option>General Enquiry</option>
+<option>Complaint</option>
+<option>Suggestion</option>
+<option>Volunteer Request</option>
+</select>
+
+<br><br>
+
+<label>Message:</label><br>
+
+<textarea
+rows="6"
+cols="40"
+required>
+</textarea>
+
+<br><br>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
         
             <section id="contact">
             <img src="images/shelter 6.png" alt="contact details>
@@ -167,29 +212,33 @@ The organisation will create opportunities for people to rebuild their lives.</p
               <form action="action_page.php" style="border:1px solid #ccc">
   <div class="container">
     <h5>Enquiry Form</h5>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
+    
+    <form id="enquiryForm">
+    <label>Full Name:</label><br>
+<input type="text" id="name" required><br><br>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+<label>Email:</label><br>
+<input type="email" id="email" required><br><br>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+<label>Phone Number:</label><br>
+<input type="tel" id="phone"
+pattern="[0-9]{10}"
+required><br><br>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+<label>Enquiry Type:</label><br>
+<select id="enquiryType">
+<option>Volunteer</option>
+<option>Sponsorship</option>
+<option>Donation</option>
+<option>Shelter Services</option>
+</select><br><br>
 
-    <label for="Enter enquiry"><b>Enquiry</b></label>
-    <input type="Equiry" placeholder="Enquiry" name="Enquiry" required>
+<button type="submit">Submit Enquiry</button>
 
-    <label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-    </label>
+</form>
 
-    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+<div id="response"></div>
 
-    <div class="clearfix">
-      <button type="submit" class="Submit">Submit</button>
     </div>
   </div>
 </form>

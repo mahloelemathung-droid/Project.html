@@ -304,3 +304,12 @@ button:hover {
     padding: 15px;
     background: #f4f4f4;
 }
+/* contact form*/
+.contact form{
+  
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

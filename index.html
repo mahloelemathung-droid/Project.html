@@ -6,6 +6,14 @@
         <link rel="icon" type="image/x icon" href="shelter 1 png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
         <title>Hope for All Shelter</title>
+<meta name="description"
+content="Hope for All Shelter provides emergency shelter, food assistance, counselling, volunteer opportunities and community support.">
+
+<meta name="keywords"
+content="shelter, charity, homeless support, donations, volunteer, community outreach">
+
+<meta name="author"
+content="Hope for All Shelter">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -25,7 +33,8 @@
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
   <a href="#enquiry">Enquiry</a>
-</div>
+  <a href="#donate">Donate </a>
+             </div>
 
                 
 
@@ -82,7 +91,30 @@ It becomes helpful when collaborating with local business, government support an
 We empower individuals through skill development.
 The organisation creates opportunities for people to rebuild their lives.
 </P>
+
+<section>
+    <h2>Upcoming Events</h2>
+    <div id="events"></div>
+</section>
                 </div>
+                <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <button class="accordion">Who can stay at Hope for All Shelter?</button>
+    <div class="panel">
+        <p>We provide temporary shelter for vulnerable individuals and families.</p>
+    </div>
+
+    <button class="accordion">How can I donate?</button>
+    <div class="panel">
+        <p>You can donate food, clothes, blankets, or money.</p>
+    </div>
+
+    <button class="accordion">How can I volunteer?</button>
+    <div class="panel">
+        <p>Contact us through our volunteer registration form.</p>
+    </div>
+</section>
                 <div>
                    <section id="services ">
            <img src="images/shelter 4.png" alt="building">
@@ -95,6 +127,22 @@ Accommodates a certain number of people and provide them with their daily needs 
 We offer support services and counselling to help individuals cope with stress and personal challenges.
 It becomes helpful when collaborating with local business, government support and attracts volunteers.
 The organisation will create opportunities for people to rebuild their lives.</p>
+
+<section>
+    <h3>Our Services</h3>
+
+    <input type="text" id="searchInput"
+           placeholder="Search services...">
+
+    <ul id="serviceList">
+        <li>Emergency Shelter</li>
+        <li>Food Assistance</li>
+        <li>Clothing Donations</li>
+        <li>Counselling Services</li>
+        <li>Volunteer Program</li>
+        <li>Community Outreach</li>
+    </ul>
+</section>
            
 <div>
            <section id="services" >
@@ -146,8 +194,34 @@ The organisation will create opportunities for people to rebuild their lives.</p
   </div>
 </form>
             </section>
+            <section>
+            <div>
+                <h6>Donation </h6>
+                Food Parcels:
+    <input type="number" id="food" value="0"><br><br>
+
+    Blankets:
+    <input type="number" id="blankets" value="0"><br><br>
+
+    School Kits:
+    <input type="number" id="kits" value="0"><br><br>
+
+    Other:
+    <input type="number" id="Other" value="0"><br><br>
+
+    <button onclick="calculateDonation()">Calculate</button>
+
+    <h6 id="total"></h6>
+            </div>
+            </section>
         </main>
         <footer>
+            
+    <h4>Follow Us</h4>
+
+    <a href="https://facebook.com">Facebook</a>
+    <a href="https://instagram.com">Instagram</a>
+    <a href="https://twitter.com">Twitter</a>
             <p>© 2026 Hope for all shelter</p>
         </footer>
 

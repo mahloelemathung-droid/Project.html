@@ -300,14 +300,75 @@
   }
 })();
 
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
+let acc = document.querySelectorAll(".accordion");
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+acc.forEach(item => {
+    item.addEventListener("click", function () {
+        let panel = this.nextElementSibling;
+
+        if(panel.style.display === "block"){
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+});
+function calculateDonation(){
+
+    let food = document.getElementById("food").value * 50;
+    let blankets = document.getElementById("blankets").value * 100;
+    let kits = document.getElementById("kits").value * 150;
+    let other = document.getElementById("other"). value *200;
+
+    let total = food + blankets + kits;
+
+    document.getElementById("total").innerHTML =
+    "Total Donation Value: R" + total;
 }
-</script>
+document.getElementById("searchInput")
+.addEventListener("keyup", function() {
+
+    let filter = this.value.toLowerCase();
+    let services = document.querySelectorAll("#serviceList li");
+
+    services.forEach(service => {
+
+        let text = service.textContent.toLowerCase();
+
+        if(text.includes(filter)){
+            service.style.display = "";
+        } else {
+            service.style.display = "none";
+        }
+
+    });
+
+});
+const events = [
+{
+title: "Winter Blanket Drive",
+date: "15 June 2026"
+},
+{
+title: "Community Food Campaign",
+date: "20 July 2026"
+},
+{
+title: "Volunteer Training Day",
+date: "10 August 2026"
+}
+];
+
+const eventContainer =
+document.getElementById("events");
+
+events.forEach(event => {
+
+eventContainer.innerHTML += `
+<div class="event-card">
+<h3>${event.title}</h3>
+<p>${event.date}</p>
+</div>
+`;
+
+});
